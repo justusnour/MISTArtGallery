@@ -3,7 +3,7 @@
 # 1. Virtual Art Gallery Management System
 # Overview:
 Create a system for an online art gallery where artists can display their artwork, and customers can browse and purchase pieces. 
-<2>Core Features:<2>
+<2>Core Features:</2>
 Artists: Artists can create profiles, upload art pieces, and list pricing information.
 Artworks: Each artwork can have details like title, artist, price, and availability.
 Customers: Customers can browse artwork, view detailed pages, and purchase.
