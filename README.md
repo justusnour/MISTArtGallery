@@ -4,10 +4,10 @@
 # Overview:
 Create a system for an online art gallery where artists can display their artwork, and customers can browse and purchase pieces. 
 <h2>Core Features:</2>
-**Artists: Artists can create profiles, upload art pieces, and list pricing information.
-**Artworks: Each artwork can have details like title, artist, price, and availability.
-**Customers: Customers can browse artwork, view detailed pages, and purchase.
-Sales & Payment: Handle transactions, sales records, and payment processing.
+**Artists: Artists can create profiles, upload art pieces, and list pricing information.**
+**Artworks: Each artwork can have details like title, artist, price, and availability.**
+**Customers: Customers can browse artwork, view detailed pages, and purchase.**
+**Sales & Payment: Handle transactions, sales records, and payment processing.**
 1. End-to-End Scenarios
 Example: Artist Uploads Artwork and Customer Makes a Purchase
 Objective: An artist uploads a new artwork with details such as title, medium, price, and availability. A customer browses the gallery, selects an artwork, and proceeds with the purchase.
