@@ -4,7 +4,7 @@
 <h3>Overview:</h3>
 Create a system for an online art gallery where artists can display their artwork, and customers can browse and purchase pieces. 
 <h2>Core Features:</h2>
-Artists:Artists can create profiles, upload art pieces, and list pricing information.
+** Artists: ** Artists can create profiles, upload art pieces, and list pricing information.
 Artworks: Each artwork can have details like title, artist, price, and availability.
 Customers:Customers can browse artwork, view detailed pages, and purchase.
 Sales & Payment:Handle transactions, sales records, and payment processing.
