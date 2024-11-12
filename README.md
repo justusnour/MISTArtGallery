@@ -42,9 +42,9 @@ Create a system for an online art gallery where artists can display their artwor
 
 - **Involvement of OOP Principles:**
 
-    -**Inheritance:** Different types of artwork (e.g., Painting, Sculpture, Photography) inherit from the Artwork class.
+    + **Inheritance:** Different types of artwork (e.g., Painting, Sculpture, Photography) inherit from the Artwork class.
 
-    -**Polymorphism:** displayArtwork() behaves differently depending on the type of artwork (painting vs sculpture).
+    + **Polymorphism:** displayArtwork() behaves differently depending on the type of artwork (painting vs sculpture).
 
     -**Encapsulation:** Artist’s personal details, artwork pricing, and availability are encapsulated.
 
