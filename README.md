@@ -1,6 +1,6 @@
 # MISTArtGallery
 
-1. Virtual Art Gallery Management System
+# 1. Virtual Art Gallery Management System
 Overview:
 Create a system for an online art gallery where artists can display their artwork, and customers can browse and purchase pieces. 
 Core Features:
