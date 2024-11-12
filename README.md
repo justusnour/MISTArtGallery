@@ -62,27 +62,32 @@ Create a system for an online art gallery where artists can display their artwor
 # 2. Use of the Four Collections
 Here’s how each collection type is used in the two scenarios:
 
--1. Arrays:
+-1. **Arrays:**
+
   -**Usage:** Store fixed lists, like predefined categories of artworks (e.g., "Painting", "Sculpture", "Photography").
     
   -**Justification:** Arrays are perfect for storing a small, fixed collection of data like predefined categories that don’t change frequently.
   
--2. ArrayLists:
+-2. **ArrayLists:**
+
   -**Usage:** Store dynamic lists of artworks, customers, or orders. Artists can upload a new artwork, and it is added to the ArrayList of artworks.
     
   -**Justification:** Since the number of artworks uploaded can vary, an ArrayList allows easy addition and removal of items.
     
--3. HashMaps:
+-3. **HashMaps:**
+
   -**Usage:** Store data in key-value pairs, such as mapping CustomerID to Customer objects or ArtworkID to sales data.
     
   -**Justification:** HashMaps are ideal for fast lookups, such as finding a customer by their ID or tracking the number of sales for an artwork.
     
--4. HashSets:
+-4. **HashSets:**
+
   -**Usage:** Store unique items, such as the list of artworks that have been sold.
     
   -**Justification:** Since HashSets don’t allow duplicates, they ensure that each artwork can only appear once in the list of sold items.
     
 # 3. Final Thoughts
+
 -**Inheritance:** Painting, Sculpture, and Photography are subclasses of Artwork, allowing polymorphic behavior in methods like displayArtwork().
 
 -**Polymorphism:** Different types of artworks implement the displayArtwork() method in their own way.
