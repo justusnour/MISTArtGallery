@@ -1,0 +1,95 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+public class ArtGallery {
+    private List<Artwork> artworks;
+
+    public ArtGallery() {
+        artworks = new ArrayList<>();
+        generateArtworks();
+    }
+
+    private void generateArtworks() {
+        String[] artistNames = {"Alice Smith", "Bob Jones", "Carol Lee", "David Brown", "Eve White"};
+        String[] paintingNames = {"Sunset Dream", "Mountain Bliss", "Cityscape", "Ocean Waves", "Forest Mist"};
+        String[] sizes = {"small", "medium", "large"};
+        int[] prices = {1000, 5000, 10000};
+
+        Random random = new Random();
+
+        for (int i = 0; i < 5; i++) {
+            String artistName = artistNames[i];
+            String paintingName = paintingNames[i];
+            String size = sizes[random.nextInt(sizes.length)];
+            int price = size.equals("small") ? prices[0] : size.equals("medium") ? prices[1] : prices[2];
+            String serialNumber = generateSerialNumber(size, price, i + 1);
+
+            Artwork artwork = new Artwork(artistName, paintingName, size, price, serialNumber);
+            artworks.add(artwork);
+        }
+    }
+
+    private String generateSerialNumber(String size, int price, int uniqueId) {
+        String sizePrefix = size.equals("small") ? "S" : size.equals("medium") ? "M" : "L";
+        return sizePrefix + "-" + price + "-" + uniqueId;
+    }
+
+    public void displayArtworksByArtist(String artistName) {
+        boolean found = false;
+        for (Artwork artwork : artworks) {
+            if (artwork.getArtistName().equalsIgnoreCase(artistName)) {
+                System.out.println(artwork);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No artworks found for artist: " + artistName);
+        }
+    }
+
+    public static void main(String[] args) {
+        ArtGallery gallery = new ArtGallery();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Art Gallery!");
+        System.out.println("Here are the available artworks:");
+        gallery.artworks.forEach(System.out::println);
+
+        System.out.println("\nSearch for artworks by artist.");
+        System.out.print("Enter the artist's name: ");
+        String artistName = scanner.nextLine();
+
+        System.out.println("\nSearch Results:");
+        gallery.displayArtworksByArtist(artistName);
+
+        scanner.close();
+    }
+}
+
+class Artwork {
+    private String artistName;
+    private String paintingName;
+    private String size;
+    private int price;
+    private String serialNumber;
+
+    public Artwork(String artistName, String paintingName, String size, int price, String serialNumber) {
+        this.artistName = artistName;
+        this.paintingName = paintingName;
+        this.size = size;
+        this.price = price;
+        this.serialNumber = serialNumber;
+    }
+
+    public String getArtistName() {
+        return artistName;
+    }
+
+    @Override
+    public String toString() {
+        return "Artist: " + artistName + ", Painting: \"" + paintingName + "\", Size: " + size + ", Price: $" + price +
+               ", Serial Number: " + serialNumber;
+    }
+}
