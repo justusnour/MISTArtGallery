@@ -1,12 +1,27 @@
 
 public class Artwork {
 
-	public String title;
-	public String artist;
-	public String price;
-	public boolean inStock;
+	private String title;
+    private String artist;
+    private double price;
+    private boolean inStock;
+    private String paintingsize; // small, medium, or large
+    private int paintingID; // ID for the painting
+    
+    private static final int SMALL_PRICE = 1000;
+    private static final int MED_PRICE = 5000;
+    private static final int LARGE_PRICE = 10000;
+    
+	public Artwork(String title, String artist, double price, String paintingsize, int paintingID) {
+		this.title = title;
+		this.artist = artist;
+		this.price = price;
+		this.paintingsize = paintingsize;
+		this.paintingID = paintingID;
+	}
 	
-	//getters + setters
+	
+	//getters and setters
 	public String getTitle() {
 		return title;
 	}
@@ -19,19 +34,26 @@ public class Artwork {
 	public void setArtist(String artist) {
 		this.artist = artist;
 	}
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
-		this.price = price;
+	public void setPrice(double price) {
+		
 	}
-	public boolean isAvailable() {
+	public boolean isInStock() {
 		return inStock;
 	}
-	public void setAvailable(boolean inStock) {
+	public void setInStock(boolean inStock) {
 		this.inStock = inStock;
 	}
-	
+	public String getPaintingsize() {
+		return paintingsize;
+	}
+	public void setPaintingsize(String paintingsize) {
+		this.paintingsize = paintingsize;
+	}
+		
 	
 	
 }
+	
