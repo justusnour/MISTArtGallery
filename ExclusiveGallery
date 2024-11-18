@@ -1,0 +1,34 @@
+//exclusive gallery holding premium art
+
+public class ExclusiveGallery {
+
+	private Artwork[] premiumArtworks;
+	
+	//constructor
+	public ExclusiveGallery() {
+        premiumArtworks = new Artwork[5];
+        
+        //5 exclusive artwork
+        premiumArtworks[0] = new Artwork("Eternal Dreams", new Artist("Avery Nightingale", "USA", 45), "Large", 150000);
+        premiumArtworks[1] = new Artwork("Whispers of the Past", new Artist("Benjamin Frost", "UK", 38), "Medium", 120000);
+        premiumArtworks[2] = new Artwork("The Cosmic Journey", new Artist("Luna Dusk", "France", 33), "Large", 200000);
+        premiumArtworks[3] = new Artwork("Echoes in Time", new Artist("Maximus Voss", "Germany", 50), "Medium", 175000);
+        premiumArtworks[4] = new Artwork("Silent Reflections", new Artist("Isla Brooks", "Canada", 28), "Small", 950000);
+	}
+	
+	// Browse all famous artwork in the exclusive gallery
+    public void browsePremiumArtworks() {
+    	System.out.println();
+        System.out.println("Premium Artworks in the Exclusive Gallery:");
+        for (Artwork artwork : premiumArtworks) {
+            if (artwork != null) { //checks that the program only prints information for actual Artwork objects
+                System.out.println("Title: " + artwork.getTitle() + ", Price: $" + artwork.getPrice() + ", Artist: " + artwork.getArtist().getName());
+            }
+        }
+        System.out.println();
+    }
+    
+    public Artwork[] getFamousArtworks() {
+        return premiumArtworks;
+    }
+}
