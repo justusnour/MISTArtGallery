@@ -93,5 +93,3 @@ Here’s how each collection type is used in the two scenarios:
 - **Polymorphism:** Different types of artworks implement the displayArtwork() method in their own way.
 
 - **Encapsulation:** Personal details and artwork prices are kept private and only accessible via getter/setter methods.
-
-- **Composition:** The Order class "has a"
