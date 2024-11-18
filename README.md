@@ -102,8 +102,8 @@ Categories for customers to search for art (String artist, double price/budget, 
 
 Use 
 # CHATGPT USAGE
-Gave chat our current project and asked for ideas on how to use the last collection, Array.
-Chat suggested making an exclusive gallery that holds a fixed number of artworks.
-Used to populate artist and artwork objects 
-Use to create artist/customer objects in main method
+- Gave chat our current project and asked for ideas on how to use the last collection, Array.
+- Chat suggested making an exclusive gallery that holds a fixed number of artworks.
+- Used to populate artist and artwork objects 
+- Use to create artist/customer objects in main method
 
