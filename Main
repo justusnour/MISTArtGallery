@@ -1,0 +1,45 @@
+public class Main {
+
+	public static void main(String[] args) {
+
+
+		//SCENARIO 1: Artist creates profile and uploads artwork
+		
+		// Create an artist profile
+        Artist artist1 = new Artist("Avery Nightingale", "USA", 45);
+
+        // Display the artist's profile
+        artist1.displayProfile();
+
+        // Artist uploads 3 artworks
+        artist1.uploadArtwork("Eternal Dreams", "Large", 15000);
+        artist1.uploadArtwork("Whispers of the Past", "Medium", 1200);
+        artist1.uploadArtwork("The Cosmic Journey", "Large", 20000);
+        
+        System.out.println();
+
+		//SCENARIO 2: Customer creates a profile and browses/purchases artwork
+		
+        // Create a customer profile
+        Customer customer1 = new Customer("Alice", 30, 50000.00);
+
+        // Display the customer's profile
+        customer1.displayProfile();
+
+        // Create an exclusive gallery object and browse its artworks
+        ExclusiveGallery gallery = new ExclusiveGallery();
+        customer1.browsePremiumArtworks(gallery); // Browse exclusive artworks in the gallery
+
+        // Customer browses artworks uploaded by the artist
+        customer1.browseArtworks(artist1.getArtworks()); // Browse artist1s artworks
+
+        // Customer attempts to purchase an artwork by the artist
+        Artwork artworkToPurchase = artist1.getArtworks().get(1); // Choosing the second artwork ("Whispers of the Past")
+        customer1.purchaseArtwork(artworkToPurchase);
+
+        // View purchased artworks
+        customer1.viewPurchasedArtworks();
+
+	}
+
+}
