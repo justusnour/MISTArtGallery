@@ -93,3 +93,16 @@ Here’s how each collection type is used in the two scenarios:
 - **Polymorphism:** Different types of artworks implement the displayArtwork() method in their own way.
 
 - **Encapsulation:** Personal details and artwork prices are kept private and only accessible via getter/setter methods.
+- **Composition** : The Order class "has a"
+#Building it out:
+
+Categories for artists to describe their artwork (String name, double price, string size, etc.) - Artwork class
+
+Categories for customers to search for art (String artist, double price/budget, string size, etc.) - Customer class
+
+Use 
+#CHATGPT USAGE
+Gave chat our current project and asked for ideas on how to use the last collection, Array. Chat suggested making an exclusive gallery that holds a fixed number of artworks.
+Used to populate artist and artwork objects 
+Use to create artist/customer objects in main method
+
