@@ -1,59 +1,91 @@
+//Stores artwork information
+
+import java.util.HashMap;
 
 public class Artwork {
 
+	//artwork attributes
 	private String title;
-    private String artist;
-    private double price;
-    private boolean inStock;
-    private String paintingsize; // small, medium, or large
-    private int paintingID; // ID for the painting
-    
-    private static final int SMALL_PRICE = 1000;
-    private static final int MED_PRICE = 5000;
-    private static final int LARGE_PRICE = 10000;
-    
-	public Artwork(String title, String artist, double price, String paintingsize, int paintingID) {
+	private Artist artist;
+	private double price;
+	private boolean isAvailable;
+	private int ID;
+	private String size; //small, medium, large
+	private static HashMap<Integer, Artwork> artworkIDs = new HashMap<Integer, Artwork>();
+	private static int nextID = 1;
+	
+	//constructor
+	public Artwork(String title, Artist artist, String size, double price) {
 		this.title = title;
 		this.artist = artist;
+		this.size = size;
 		this.price = price;
-		this.paintingsize = paintingsize;
-		this.paintingID = paintingID;
+		this.isAvailable = true;
+		this.ID = generateID();
+		artworkIDs.put(ID, this);
 	}
 	
+	public static Artwork getArtworkByID(int ID) {
+        return artworkIDs.get(ID);
+    }
 	
-	//getters and setters
+	private int generateID() {
+        return nextID++;  // Return the current value of nextID and increment it
+    }
+	
+	//getTitle
 	public String getTitle() {
 		return title;
 	}
+	//setTitle
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getArtist() {
+	
+	//getArtist
+	public Artist getArtist() {
 		return artist;
 	}
-	public void setArtist(String artist) {
+	//setArtist
+	public void setArtist(Artist artist) {
 		this.artist = artist;
 	}
+	
+	//getPrice
 	public double getPrice() {
 		return price;
 	}
+	//setPrice
 	public void setPrice(double price) {
-		
+		this.price = price;
 	}
-	public boolean isInStock() {
-		return inStock;
+	
+	//isAvailable
+	public boolean isAvailable() {
+		return isAvailable;
 	}
-	public void setInStock(boolean inStock) {
-		this.inStock = inStock;
+	//setAvilable
+	public void setAvailable(boolean isAvailable) {
+		this.isAvailable = isAvailable;
 	}
-	public String getPaintingsize() {
-		return paintingsize;
+
+	//getID
+	public int getID() {
+		return ID;
 	}
-	public void setPaintingsize(String paintingsize) {
-		this.paintingsize = paintingsize;
+
+	//setID
+	public void setID(int ID) {
+		this.ID = ID;
 	}
-		
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
 	
 	
 }
-	
