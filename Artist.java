@@ -1,20 +1,20 @@
-public class Artist {
-	
+//artist creates a profile and uploads artwork
+
+import java.util.ArrayList;
+
+//(subclass)
+public class Artist extends Person {
 	
 	//artist attributes
-	public String name;
-	public String location;
-	public int age;
+	private String location;
+	private ArrayList<Artwork> artworks;
 	
-	
-	//getName
-	public String getName() {
-		return name;
-	}
-	//setName
-	public void setName(String name) {
-		this.name = name;
-	}
+	//constructor
+		public Artist(String name, String location, int age) {
+			super(name, age); //calls from person
+			this.location = location;
+			this.artworks = new ArrayList<>();
+		}
 	
 	//getLocation
 	public String getLocation() {
@@ -25,25 +25,24 @@ public class Artist {
 		this.location = location;
 	}
 	
-	//getAge
-	public int getAge() {
-		return age;
-	}
-	//setAge
-	public void setAge(int age) {
-		this.age = age;
-	}
 	
-	//print profile method
-	public void profile() {
-		System.out.println("Artist Profile:");
-		System.out.println("------------------");
-		System.out.println("Name: " + name);
-		System.out.println("Age: " + age);
-		System.out.println("Location: " + location);
-		System.out.println("------------------");
-	}
+	// Override displayProfile to include artist-specific details
+    public void displayProfile() {
+        super.displayProfile();  // Call the parent (Person) method
+        System.out.println("Location: " + location);
+    }
 	
+    //Uploading artwork
+	public void uploadArtwork(String title, String size, double price) {
+        Artwork artwork = new Artwork(title, this, size, price); // Create Artwork object
+        artwork.setAvailable(true);  // Set availability
+        artworks.add(artwork);  // Add artwork to the ArrayList
+    }
+	
+	// Get the ArrayList of artwork
+    public ArrayList<Artwork> getArtworks() {
+        return artworks;  // Return the ArrayList of artwork
+    }
 	
 	
 }
